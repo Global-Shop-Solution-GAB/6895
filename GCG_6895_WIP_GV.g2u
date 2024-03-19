@@ -1,0 +1,893 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.fmWIPDetail..Create(BaseForm)
+Gui.fmWIPDetail..Caption("WIP Detail Gridview")
+Gui.fmWIPDetail..Size(20370,10695)
+Gui.fmWIPDetail..MinX(0)
+Gui.fmWIPDetail..MinY(0)
+Gui.fmWIPDetail..Position(0,0)
+Gui.fmWIPDetail..BackColor(-2147483633)
+Gui.fmWIPDetail..MousePointer(0)
+Gui.fmWIPDetail..Event(UnLoad,fmWIPDetail_UnLoad)
+Gui.fmWIPDetail..AlwaysOnTop(False)
+Gui.fmWIPDetail..FontName("Tahoma")
+Gui.fmWIPDetail..FontSize(8.25)
+Gui.fmWIPDetail..ControlBox(True)
+Gui.fmWIPDetail..MaxButton(True)
+Gui.fmWIPDetail..MinButton(True)
+Gui.fmWIPDetail..Moveable(True)
+Gui.fmWIPDetail..Sizeable(True)
+Gui.fmWIPDetail..ShowInTaskBar(True)
+Gui.fmWIPDetail..TitleBar(True)
+Gui.fmWIPDetail.cmdREFRESH.Create(Button)
+Gui.fmWIPDetail.cmdREFRESH.Size(450,375)
+Gui.fmWIPDetail.cmdREFRESH.Position(19815,90)
+Gui.fmWIPDetail.cmdREFRESH.Caption("REFRESH")
+Gui.fmWIPDetail.cmdREFRESH.Event(Click,cmdREFRESH_Click)
+Gui.fmWIPDetail.cmdREFRESH.Anchor(9)
+Gui.fmWIPDetail.cmdREFRESH.TabStop(True)
+Gui.fmWIPDetail.cmdREFRESH.TabIndex(7)
+Gui.fmWIPDetail.cmdREFRESH.Enabled(True)
+Gui.fmWIPDetail.cmdREFRESH.Visible(True)
+Gui.fmWIPDetail.cmdREFRESH.Zorder(0)
+Gui.fmWIPDetail.cmdREFRESH.FontName("Tahoma")
+Gui.fmWIPDetail.cmdREFRESH.FontSize(8.25)
+Gui.fmWIPDetail.lblSDate.Create(Label,"Starting Date:",False,1095,210,0,600,360,False,0,"Arial",8,-2147483633,0,0)
+Gui.fmWIPDetail.lblSDate.FontStyle(True,False,False,False,False)
+Gui.fmWIPDetail.lblSDate.BorderStyle(0)
+Gui.fmWIPDetail.lblEDate.Create(Label,"Ending Date:",True,1005,210,0,180,165,True,0,"Arial",8,-2147483633,0,0)
+Gui.fmWIPDetail.lblEDate.FontStyle(True,False,False,False,False)
+Gui.fmWIPDetail.lblEDate.BorderStyle(0)
+Gui.fmWIPDetail.dtpSDate.Create(DatePicker)
+Gui.fmWIPDetail.dtpSDate.Size(1935,285)
+Gui.fmWIPDetail.dtpSDate.Position(1890,270)
+Gui.fmWIPDetail.dtpSDate.TabStop(True)
+Gui.fmWIPDetail.dtpSDate.TabIndex(1)
+Gui.fmWIPDetail.dtpSDate.Enabled(False)
+Gui.fmWIPDetail.dtpSDate.Visible(False)
+Gui.fmWIPDetail.dtpSDate.Zorder(0)
+Gui.fmWIPDetail.dtpSDate.CheckBox(False)
+Gui.fmWIPDetail.dtpSDate.FontName("Tahoma")
+Gui.fmWIPDetail.dtpSDate.FontSize(8.25)
+Gui.fmWIPDetail.dtpEDate.Create(DatePicker)
+Gui.fmWIPDetail.dtpEDate.Size(1935,285)
+Gui.fmWIPDetail.dtpEDate.Position(1380,120)
+Gui.fmWIPDetail.dtpEDate.TabStop(True)
+Gui.fmWIPDetail.dtpEDate.TabIndex(2)
+Gui.fmWIPDetail.dtpEDate.Enabled(True)
+Gui.fmWIPDetail.dtpEDate.Visible(True)
+Gui.fmWIPDetail.dtpEDate.Zorder(0)
+Gui.fmWIPDetail.dtpEDate.CheckBox(False)
+Gui.fmWIPDetail.dtpEDate.FontName("Tahoma")
+Gui.fmWIPDetail.dtpEDate.FontSize(8.25)
+Gui.fmWIPDetail.cmdExport.Create(Button)
+Gui.fmWIPDetail.cmdExport.Size(855,375)
+Gui.fmWIPDetail.cmdExport.Position(18855,90)
+Gui.fmWIPDetail.cmdExport.Anchor(9)
+Gui.fmWIPDetail.cmdExport.Caption("EXPORT")
+Gui.fmWIPDetail.cmdExport.FontStyle(True,False,False,False,False)
+Gui.fmWIPDetail.cmdExport.Event(Click,cmdExport_Click)
+Gui.fmWIPDetail.cmdExport.TabStop(True)
+Gui.fmWIPDetail.cmdExport.TabIndex(6)
+Gui.fmWIPDetail.cmdExport.Enabled(True)
+Gui.fmWIPDetail.cmdExport.Visible(True)
+Gui.fmWIPDetail.cmdExport.Zorder(0)
+Gui.fmWIPDetail.cmdExport.FontName("Tahoma")
+Gui.fmWIPDetail.cmdExport.FontSize(8.25)
+Gui.fmWIPDetail.frmGsGc.Create(Frame)
+Gui.fmWIPDetail.frmGsGc.Enabled(True)
+Gui.fmWIPDetail.frmGsGc.Visible(True)
+Gui.fmWIPDetail.frmGsGc.Zorder(0)
+Gui.fmWIPDetail.frmGsGc.Size(20160,9480)
+Gui.fmWIPDetail.frmGsGc.Position(105,660)
+Gui.fmWIPDetail.frmGsGc.Caption("")
+Gui.fmWIPDetail.frmGsGc.FontName("Tahoma")
+Gui.fmWIPDetail.frmGsGc.FontSize(8.25)
+Gui.fmWIPDetail.frmGsGc.Anchor(15)
+Gui.fmWIPDetail.GsGcWIP.Create(GsGridControl)
+Gui.fmWIPDetail.GsGcWIP.Size(20160,9480)
+Gui.fmWIPDetail.GsGcWIP.Position(0,0)
+Gui.fmWIPDetail.GsGcWIP.Anchor(15)
+Gui.fmWIPDetail.GsGcWIP.TabStop(True)
+Gui.fmWIPDetail.GsGcWIP.TabIndex(5)
+Gui.fmWIPDetail.GsGcWIP.Enabled(True)
+Gui.fmWIPDetail.GsGcWIP.Visible(True)
+Gui.fmWIPDetail.GsGcWIP.Zorder(0)
+Gui.fmWIPDetail.GsGcWIP.Parent("frmGsGc")
+Gui.fmWIPDetail.GsGcWIP.Dock(5)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Robert Cole 09/12/2022
+'Added/ Changed:
+
+v.Local.dSDate.Declare
+v.Local.dEDate.Declare
+
+f.Intrinsic.Control.CallSub(Directory_Check)
+
+'POPULATE DATEPICKERS FOR THE START AND END OF THE WEEK PRIOR
+'f.Intrinsic.Date.DateAdd("d",-30,v.Ambient.Date,v.Local.dSDate)
+'f.Intrinsic.Date.BeginningOfWeek(v.Local.dSDate,v.Local.dSDate)
+'gui.fmWIPDetail.dtpSDate.Value(v.Local.dSDate)
+gui.fmWIPDetail.dtpSDate.Value("1/1/1900")
+f.Intrinsic.Date.DateAdd("d",-7,v.Ambient.Date,v.Local.dEDate)
+f.Intrinsic.Date.EndOfWeek(v.Local.dEDate,v.Local.dEDate)
+gui.fmWIPDetail.dtpEDate.Value(v.Local.dEDate)
+
+f.Intrinsic.Control.CallSub(SetContextMenus)
+
+f.Intrinsic.UI.InvokeWaitDialog("Please Wait...Loading...","Loading...")
+
+f.Intrinsic.Control.CallSub(dtLoad)
+
+gui.fmWIPDetail.GsGcWIP.Visible(false)
+gui.fmWIPDetail.GsGcWIP.SuspendLayout
+gui.fmWIPDetail.GsGcWIP.AddGridviewFromDataview("gvWIP","dtWIP","dvWIP")
+
+f.Intrinsic.Control.CallSub(gvFormat)
+
+gui.fmWIPDetail.GsGcWIP.MainView("gvWIP")
+
+F.Intrinsic.Control.CallSub(Deserialize, "FORM", "fmWIPDetail", "GRIDCONTROL", "GsGcWIP", "GRIDVIEW", "gvWIP", "REGID", "6895")
+
+gui.fmWIPDetail.GsGcWIP.ResumeLayout
+gui.fmWIPDetail.GsGcWIP.Visible(true)
+
+f.Intrinsic.UI.CloseWaitDialog
+
+gui.fmWIPDetail..Visible(true)
+Program.Sub.Main.End
+
+Program.Sub.SetContextMenus.Start
+'POPULATE CONTEXT MENUS FOR THE GRIDVIEW
+f.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+gui.fmWIPDetail..ContextMenuCreate("ctxWIP")
+gui.fmWIPDetail..ContextMenuAddItem("ctxWIP","Export",0,"Export")
+gui.fmWIPDetail..ContextMenuSetItemEventHandler("ctxWIP","Export","cmdEXPORT_Click")
+gui.fmWIPDetail..ContextMenuAddItem("ctxWIP","Refresh",0,"Refresh")
+gui.fmWIPDetail..ContextMenuSetItemEventHandler("ctxWIP","Refresh","cmdREFRESH_Click")
+gui.fmWIPDetail..ContextMenuAddItem("ctxWIP","Reset Grid",0,"Reset Grid")
+gui.fmWIPDetail..ContextMenuSetItemEventHandler("ctxWIP","Reset Grid","ResetSerialization")
+gui.fmWIPDetail.GsGcWIP.ContextMenuAttach("ctxWIP")
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.SetContextMenus.End
+
+Program.Sub.cmdExport_Click.Start
+'EXPORT THE GRIDVIEW TO AN EXCEL SHEET AND OPEN THE FILE
+f.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+v.Local.sOutFile.Declare(String)
+v.Local.sDate.Declare(String)
+v.Local.sTime.Declare(String)
+v.Local.iCount.Declare
+v.Local.sMsg.Declare(String)
+v.Local.bCheck.Declare(boolean)
+V.Local.sFileExport.Declare(String)
+
+gui.fmWIPDetail.GsGcWIP.GetRowCount("gvWIP",v.Local.iCount)
+
+Function.Intrinsic.Control.BlockEvents
+gui.fmWIPDetail..Enabled(false)
+f.Intrinsic.Control.If(v.Local.iCount,=,0)
+	f.Intrinsic.UI.Msgbox("No rows in grid to export!")
+	gui.fmWIPDetail..SetFocus
+	gui.fmWIPDetail..Enabled(True)
+	Function.Intrinsic.Control.UnblockEvents
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.String.Format(v.Ambient.Date,"MMDDYYYY",v.Local.sDate)
+f.Intrinsic.String.Format(v.Ambient.Now,"HhNn",v.Local.sTime)
+
+f.Intrinsic.String.Build("{0}\CUSTOM\6895\EXPORTS\WIP_{1}_{2}.xlsx",v.Caller.GlobalDir,v.Local.sDate.trim,v.Local.sTime.Trim,V.Local.sFileExport)
+f.Intrinsic.File.Exists(v.Local.sFileExport,v.Local.bCheck)
+f.Intrinsic.Control.If(v.Local.bCheck,=,true)
+	f.Intrinsic.File.DeleteFile(v.Local.sFileExport)
+f.Intrinsic.Control.EndIf
+
+gui.fmWIPDetail.GsGcWIP.Export(V.Local.sFileExport,"xlsx")
+
+f.Intrinsic.File.Exists(v.Local.sFileExport,v.Local.bCheck)
+
+f.Intrinsic.Control.If(v.Local.bCheck,=,False)
+	f.Intrinsic.UI.Msgbox("Export cancelled (File does not exist)")
+	gui.fmWIPDetail..SetFocus
+	gui.fmWIPDetail..Enabled(True)
+	Function.Intrinsic.Control.UnblockEvents
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+f.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+
+Function.Intrinsic.Control.UnblockEvents
+gui.fmWIPDetail..SetFocus
+gui.fmWIPDetail..Enabled(True)
+f.Intrinsic.Control.ExitSub
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdExport_Click.End
+
+Program.Sub.cmdREFRESH_Click.Start
+'CLOSE OPEN TABLES AND REFRESH THE DATA
+f.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+f.Intrinsic.UI.InvokeWaitDialog("Please Wait...Loading...","Loading...")
+gui.fmWIPDetail..Enabled(false)
+
+f.Intrinsic.Control.If(v.DataTable.dtWIP.Exists,=,true)
+	f.Data.DataView.Close("dtWIP","dvWIP")
+	f.Data.DataTable.Close("dtWIP")
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(Serialize, "FORM", "fmWIPDetail", "GRIDCONTROL", "GsGcWIP", "GRIDVIEW", "gvWIP", "REGID", "6895")
+
+f.Intrinsic.Control.CallSub(dtLoad)
+
+gui.fmWIPDetail.GsGcWIP.Visible(false)
+gui.fmWIPDetail.GsGcWIP.SuspendLayout
+gui.fmWIPDetail.GsGcWIP.AddGridviewFromDataview("gvWIP","dtWIP","dvWIP")
+gui.fmWIPDetail.GsGcWIP.MainView("gvWIP")
+
+F.Intrinsic.Control.CallSub(Deserialize, "FORM", "fmWIPDetail", "GRIDCONTROL", "GsGcWIP", "GRIDVIEW", "gvWIP", "REGID", "6895")
+
+gui.fmWIPDetail.GsGcWIP.ResumeLayout
+gui.fmWIPDetail.GsGcWIP.Visible(true)
+
+gui.fmWIPDetail..Enabled(true)
+
+f.Intrinsic.UI.CloseWaitDialog
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdREFRESH_Click.End
+
+Program.Sub.Directory_Check.Start
+'CHECK FOR AND CREATE ANY DIRECTORIES NEEDED FOR 6768
+f.Intrinsic.Control.Try
+v.Local.sError.Declare
+
+v.Local.bRet.Declare
+v.Local.sFP.Declare
+
+f.Intrinsic.String.Build("{0}\CUSTOM\6895",v.Caller.GlobalDir,v.Local.sFP)
+f.Intrinsic.File.DirExists(v.Local.sFP,v.Local.bRet)
+f.Intrinsic.Control.If(v.Local.bRet,=,false)
+	f.Intrinsic.File.CreateDir(v.Local.sFP)
+f.Intrinsic.Control.EndIf
+v.Local.sFP.Set("")
+
+f.Intrinsic.String.Build("{0}\CUSTOM\6895\EXPORTS",v.Caller.GlobalDir,v.Local.sFP)
+f.Intrinsic.File.DirExists(v.Local.sFP,v.Local.bRet)
+f.Intrinsic.Control.If(v.Local.bRet,=,false)
+	f.Intrinsic.File.CreateDir(v.Local.sFP)
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.Directory_Check.End
+
+Program.Sub.dtLoad.Start
+'LOADS DATA INTO THE VENDOR SPEND DATATABLE
+f.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+v.Local.sSQL.Declare
+v.Local.sSQLRet.Declare
+v.Local.sRet.Declare
+v.Local.dSDateP.Declare
+v.Local.dEDateP.Declare
+v.Local.sStart.Declare
+v.Local.sEnd.Declare
+v.Local.sFilter.Declare
+v.Local.sPad.Declare
+v.Local.fTtl.Declare
+v.Local.i.Declare
+
+v.Local.dSDateP.Set(v.Screen.fmWIPDetail!dtpSDate.Value)
+v.Local.dEDateP.Set(v.Screen.fmWIPDetail!dtpEDate.Value)
+f.Intrinsic.String.Format(v.Screen.fmWIPDetail!dtpSDate.Value,"YYYY-MM-DD",v.Local.sStart)
+f.Intrinsic.String.Format(v.Screen.fmWIPDetail!dtpEDate.Value,"YYYY-MM-DD",v.Local.sEnd)
+
+f.ODBC.Connection!conx.OpenCompanyConnection(999)
+
+'f.Intrinsic.String.Build("Select distinct x.JOB+x.SUFFIX as JS, x.JOB+x.SUFFIX+x.SEQ as JSS, x.JOB, x.SUFFIX, x.SEQ, rtrim(y.PART) as PART, rtrim(y.DESCRIPTION) as DESCRIPTION, y.CUSTOMER, rtrim(' ') as NAME_CUSTOMER, y.QTY_ORDER, cast('0' as float) as PIECES_COMPLTD, cast('0' as float) as QTY_CPL, y.QTY_ORDER-y.QTY_COMPLETED as QTY_LEFT, y.DATE_DUE, cast('0' as float) as SHIP_NO_INV, cast('0' as float) as SHIP_YES_INV, x.LMO, x.MACHINE, y.AMT_LABOR, cast('0' as float) as HRS_WRK, cast('0' as float) as MAT_ISSUE, y.AMT_MATERIAL, cast('0' as float) as DOLLARS_ESTIMATED, cast('0' as float) as AMT_OVERHEAD, cast('0' as float) as DOLLARS_ACTUAL, cast('0' as float) as BURDEN, y.AMT_PARTIAL_SHPMNT from V_JOB_DETAIL as x left join V_JOB_HEADER as y on y.JOB = x.JOB and y.SUFFIX = x.SUFFIX where y.DATE_DUE <> '1900-01-01' and y.DATE_CLOSED = '1900-01-01' and x.LMO <> 'Z' and x.CHARGE_DATE <= '{0}' order by x.JOB, x.SUFFIX, x.SEQ",v.Local.sEnd,v.Local.sSQL)
+f.Intrinsic.String.Build("Select distinct x.JOB+x.SUFFIX as JS, x.JOB+x.SUFFIX+x.SEQ as JSS, x.JOB, x.SUFFIX, x.SEQ, rtrim(y.PART) as PART, rtrim(y.DESCRIPTION) as DESCRIPTION, y.CUSTOMER, rtrim(' ') as NAME_CUSTOMER, y.QTY_ORDER, cast('0' as float) as PIECES_COMPLTD, cast('0' as float) as QTY_CPL, y.QTY_ORDER-y.QTY_COMPLETED as QTY_LEFT, y.DATE_DUE, cast('0' as float) as SHIP_NO_INV, cast('0' as float) as SHIP_YES_INV, x.LMO, rtrim('') as MACHINE, cast('0' as float) as AMT_LABOR, cast('0' as float) as HRS_WRK, cast('0' as float) as MAT_ISSUE, cast('0' as float) as AMT_MATERIAL, cast('0' as float) as DOLLARS_ESTIMATED, cast('0' as float) as AMT_OVERHEAD, cast('0' as float) as DOLLARS_ACTUAL, cast('0' as float) as BURDEN, y.AMT_PARTIAL_SHPMNT from V_JOB_DETAIL as x left join V_JOB_HEADER as y on y.JOB = x.JOB and y.SUFFIX = x.SUFFIX where y.DATE_DUE <> '1900-01-01' and y.DATE_CLOSED = '1900-01-01' and x.LMO <> 'Z' and x.CHARGE_DATE <= '{0}' order by x.JOB, x.SUFFIX, x.SEQ",v.Local.sEnd,v.Local.sSQL)
+
+f.Data.DataTable.CreateFromSQL("dtWIP","conx",v.Local.sSQL,true)
+
+f.ODBC.Connection!conx.Close
+
+'POPULATE DICTIONARY COLUMNS
+f.Intrinsic.Control.CallSub(Dictionary_Load)
+
+'CREATE DATAVIEW TO POPULATE GRIDVIEW
+f.Data.DataView.Create("dtWIP","dvWIP",22)
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.dtLoad.End
+
+Program.Sub.Dictionary_Load.Start
+'POPULATE DICTIONARY COLUMNS
+f.Intrinsic.Control.Try
+v.Local.sError.Declare
+
+v.Local.sSQL.Declare
+v.Local.sSQLRet.Declare
+v.Local.dSDateP.Declare
+v.Local.dEDateP.Declare
+v.Local.sStart.Declare
+v.Local.sEnd.Declare
+
+v.Local.dSDateP.Set(v.Screen.fmWIPDetail!dtpSDate.Value)
+v.Local.dEDateP.Set(v.Screen.fmWIPDetail!dtpEDate.Value)
+f.Intrinsic.String.Format(v.Screen.fmWIPDetail!dtpSDate.Value,"YYYY-MM-DD",v.Local.sStart)
+f.Intrinsic.String.Format(v.Screen.fmWIPDetail!dtpEDate.Value,"YYYY-MM-DD",v.Local.sEnd)
+
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+'JOB_DETAIL.PIECES_COMPLTD (JSS)
+f.Intrinsic.String.Build("select JOB+SUFFIX+SEQ as JSS, sum(PIECES_COMPLTD) as PIECES_COMPLTD from V_JOB_DETAIL where LMO <> 'Z' and CHARGE_DATE <= '{0}' group by JSS",v.Local.sEnd,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("PIECES_COMPLTD","conx",v.Local.sSQL)
+f.Data.Dictionary.SetDefaultReturn("PIECES_COMPLTD",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","PIECES_COMPLTD","JSS","PIECES_COMPLTD")
+f.Data.Dictionary.Close("PIECES_COMPLTD")
+
+'JOB_DETAIL.QTY_CPL (JS)
+f.Intrinsic.String.Build("select JOB+SUFFIX as JS, sum(PIECES_COMPLTD) as QTY_CPL from V_JOB_DETAIL where LMO = 'Z' and CHARGE_DATE <= '{0}' group by JS",v.Local.sEnd,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("QTY_CPL","conx",v.Local.sSQL)
+f.Data.Dictionary.SetDefaultReturn("QTY_CPL",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","QTY_CPL","JS","QTY_CPL")
+f.Data.Dictionary.Close("QTY_CPL")
+
+'CUSTOMER_MASTER.NAME_CUSTOMER (CUSTOMER)
+F.Data.Dictionary.CreateFromSQL("NAME_CUSTOMER","conx","select CUSTOMER, rtrim(NAME_CUSTOMER) from V_CUSTOMER_MASTER")
+f.Data.Dictionary.SetDefaultReturn("NAME_CUSTOMER",)
+f.Data.DataTable.FillFromDictionary("dtWIP","NAME_CUSTOMER","CUSTOMER","NAME_CUSTOMER")
+f.Data.Dictionary.Close("NAME_CUSTOMER")
+
+'SHIPMENT_LINES.SHIP_NO_INV (JS)
+f.Intrinsic.String.Build("select x.JOB+x.SUFFIX as JS, isnull(sum(y.QTY_SHIPPED),0) as SHIP_NO_INV from V_ORDER_TO_WO as x right join V_SHIPMENT_LINES as y on y.ORDER_NO = x.ORDER_NO and y.ORDER_REC = x.ORDER_LINE group by JS",v.Local.sEnd,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("SHIP_NO_INV","conx",v.Local.sSQL)
+f.Data.Dictionary.SetDefaultReturn("SHIP_NO_INV",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","SHIP_NO_INV","JS","SHIP_NO_INV")
+f.Data.Dictionary.Close("SHIP_NO_INV")
+
+'ORDER_HIST_LINE.SHIP_YES_INV (JS)
+f.Intrinsic.String.Build("select x.JOB+x.SUFFIX as JS, isnull(sum(y.QTY_SHIPPED),0) as SHIP_YES_INV from V_ORDER_TO_WO as x right join V_ORDER_HIST_LINE as y on y.ORDER_NO = x.ORDER_NO and y.ORDER_LINE = x.ORDER_LINE group by JS",v.Local.sEnd,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("SHIP_YES_INV","conx",v.Local.sSQL)
+f.Data.Dictionary.SetDefaultReturn("SHIP_YES_INV",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","SHIP_YES_INV","JS","SHIP_YES_INV")
+f.Data.Dictionary.Close("SHIP_YES_INV")
+
+'JOB_DETAIL.HRS_WRK (JSS)
+f.Intrinsic.String.Build("select JOB+SUFFIX+SEQ as JSS, sum(HOURS_WORKED) as HRS_WRK from V_JOB_DETAIL where LMO = 'L' and CHARGE_DATE <= '{0}' group by JSS",v.Local.sEnd,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("HRS_WRK","conx",v.Local.sSQL)
+f.Data.Dictionary.SetDefaultReturn("HRS_WRK",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","HRS_WRK","JSS","HRS_WRK")
+f.Data.Dictionary.Close("HRS_WRK")
+
+'JOB_DETAIL.MAT_ISSUE (JSS)
+f.Intrinsic.String.Build("select JOB+SUFFIX+SEQ as JSS, sum(HOURS_WORKED) as HRS_WRK from V_JOB_DETAIL where LMO = 'M' and CHARGE_DATE <= '{0}' group by JSS",v.Local.sEnd,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("MAT_ISSUE","conx",v.Local.sSQL)
+f.Data.Dictionary.SetDefaultReturn("MAT_ISSUE",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","MAT_ISSUE","JSS","MAT_ISSUE")
+f.Data.Dictionary.Close("MAT_ISSUE")
+
+'JOB_DETAIL.AMT_OVERHEAD (JSS)
+f.Intrinsic.String.Build("select JOB+SUFFIX+SEQ as JSS, sum(AMT_OVERHEAD) as AMT_OVERHEAD from V_JOB_DETAIL where LMO <> 'Z' and CHARGE_DATE <= '{0}' group by JSS",v.Local.sEnd,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("AMT_OVERHEAD","conx",v.Local.sSQL)
+f.Data.Dictionary.SetDefaultReturn("AMT_OVERHEAD",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","AMT_OVERHEAD","JSS","AMT_OVERHEAD")
+f.Data.Dictionary.Close("AMT_OVERHEAD")
+
+'JOB_OPERATIONS.PART (JSS)
+F.Data.Dictionary.CreateFromSQL("MACHINE","conx","Select JOB+SUFFIX+SEQ as JSS, rtrim(PART) from V_JOB_OPERATIONS")
+f.Data.Dictionary.SetDefaultReturn("MACHINE","")
+f.Data.DataTable.FillFromDictionary("dtWIP","MACHINE","JSS","MACHINE")
+f.Data.Dictionary.Close("MACHINE")
+
+'JOB_OPERATIONS.DOLLARS_ESTIMATED (JSS)
+F.Data.Dictionary.CreateFromSQL("DOLLARS_ESTIMATED","conx","Select JOB+SUFFIX+SEQ as JSS, DOLLARS_ESTIMATED from V_JOB_OPERATIONS")
+f.Data.Dictionary.SetDefaultReturn("DOLLARS_ESTIMATED",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","DOLLARS_ESTIMATED","JSS","DOLLARS_ESTIMATED")
+f.Data.Dictionary.Close("DOLLARS_ESTIMATED")
+
+'JOB_DETAIL.DOLLARS_ACTUAL (JSS)
+f.Intrinsic.String.Build("select JOB+SUFFIX+SEQ as JSS, sum(AMOUNT_LABOR)+sum(AMT_OVERHEAD) as DOLLARS_ACTUAL from V_JOB_DETAIL where LMO <> 'Z' and CHARGE_DATE <= '{0}' group by JSS",v.Local.sEnd,v.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("DOLLARS_ACTUAL","conx",v.Local.sSQL)
+f.Data.Dictionary.SetDefaultReturn("DOLLARS_ACTUAL",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","DOLLARS_ACTUAL","JSS","DOLLARS_ACTUAL")
+f.Data.Dictionary.Close("DOLLARS_ACTUAL")
+
+'JOB_OPERATIONS.BURDEN (JSS)
+F.Data.Dictionary.CreateFromSQL("BURDEN","conx","Select JOB+SUFFIX+SEQ as JSS, BURDEN from V_JOB_OPERATIONS")
+f.Data.Dictionary.SetDefaultReturn("BURDEN",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","BURDEN","JSS","BURDEN")
+f.Data.Dictionary.Close("BURDEN")
+
+'JOB_DETAIL.AMOUNT_LABOR (JSS)
+F.Data.Dictionary.CreateFromSQL("AMT_LABOR","conx","Select JOB+SUFFIX+SEQ as JSS, sum(AMOUNT_LABOR) from V_JOB_DETAIL where LMO = 'L' group by JSS")
+f.Data.Dictionary.SetDefaultReturn("AMT_LABOR",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","AMT_LABOR","JSS","AMT_LABOR")
+f.Data.Dictionary.Close("AMT_LABOR")
+
+'JOB_OPERATIONS.DOLLARS_ACTUAL - AMT_MATERIAL (JSS)
+F.Data.Dictionary.CreateFromSQL("AMT_MATERIAL","conx","Select JOB+SUFFIX+SEQ as JSS, DOLLARS_ACTUAL from V_JOB_OPERATIONS where LMO = 'M'")
+f.Data.Dictionary.SetDefaultReturn("AMT_MATERIAL",0)
+f.Data.DataTable.FillFromDictionary("dtWIP","AMT_MATERIAL","JSS","AMT_MATERIAL")
+f.Data.Dictionary.Close("AMT_MATERIAL")
+
+f.ODBC.Connection!conx.Close
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.Dictionary_Load.End
+
+Program.Sub.gvFormat.Start
+'GENERATE FORMATTING FOR ALL OF THE COLUMNS IN THE GRIDVIEW
+f.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+v.Local.i.Declare
+v.Local.sColumn.Declare
+
+gui.fmWIPDetail.GsGcWIP.SetGridviewProperty("gvWIP","AllowColumnResizing",True)
+gui.fmWIPDetail.GsGcWIP.SetGridviewProperty("gvWIP","EnableAppearanceOddRow",True)
+gui.fmWIPDetail.GsGcWIP.SetGridviewProperty("gvWIP","OptionsViewRowAutoHeight",True)
+gui.fmWIPDetail.GsGcWIP.SetGridviewProperty("gvWIP","OptionsViewColumnAutoWidth",False)
+
+'v.local.sColumn.Set("")
+'gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","")
+'gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+'gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+'gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","CENTER")
+'gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",)
+'gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MaxWidth",)
+'gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","$###,##0.00")
+'gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+'gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+'gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+'f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP","JS","Visible",false)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP","JSS","Visible",false)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP","CUSTOMER","Visible",false)
+
+v.local.sColumn.Set("JOB")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Job")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",65)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("SUFFIX")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Suffix")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",45)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("SEQ")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Seq")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",65)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("PART")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Part")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","LEFT")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("DESCRIPTION")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Part Description")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","LEFT")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",105)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("NAME_CUSTOMER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Customer")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","LEFT")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",100)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("QTY_ORDER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Order QTY")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("PIECES_COMPLTD")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Issue QTY")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("QTY_CPL")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Complete QTY")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("QTY_LEFT")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","QTY Left")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("DATE_DUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Due Date")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomDateTime","d")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("SHIP_NO_INV")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Ship No Inv")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("SHIP_YES_INV")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Ship Yes Inv")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("LMO")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","LMO")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",35)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("MACHINE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Machine/Material")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",65)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("AMT_LABOR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Labor")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","$###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.AddSummaryItem("gvWIP",v.local.sColumn,"Total Labor:","Sum","","","C")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("HRS_WRK")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Hrs Worked")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.AddSummaryItem("gvWIP",v.local.sColumn,"Total Hrs Worked:","Sum","","","")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("AMT_MATERIAL")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Material")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","$###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.AddSummaryItem("gvWIP",v.local.sColumn,"Total Material:","Sum","","","C")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("MAT_ISSUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Material Issued")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.AddSummaryItem("gvWIP",v.local.sColumn,"Total Hrs Worked:","Sum","","","")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("DOLLARS_ESTIMATED")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","$ Estimated")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","$###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.AddSummaryItem("gvWIP",v.local.sColumn,"Total $ Estimated:","Sum","","","C")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("AMT_OVERHEAD")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","Overhead")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","$###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.AddSummaryItem("gvWIP",v.local.sColumn,"Total Overhead:","Sum","","","C")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("DOLLARS_ACTUAL")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","$ Actual")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","$###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.AddSummaryItem("gvWIP",v.local.sColumn,"Total $ Actual:","Sum","","","C")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("BURDEN")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","BURDEN")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","$###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.AddSummaryItem("gvWIP",v.local.sColumn,"Total Burden:","Sum","","","C")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("AMT_PARTIAL_SHPMNT")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"Caption","PARTIAL SHIP")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderFontBold","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"HeaderHAlignment","CENTER")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"CellHAlignment","FAR")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"MinWidth",85)
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"DisplayCustomNumeric","$###,##0.00")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"ReadOnly","TRUE")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"AllowEdit","FALSE")
+gui.fmWIPDetail.GsGcWIP.AddSummaryItem("gvWIP",v.local.sColumn,"Total Partial Ship:","Sum","","","C")
+gui.fmWIPDetail.GsGcWIP.SetColumnProperty("gvWIP",v.local.sColumn,"VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+v.local.sColumn.Set("")
+v.Local.i.Set(0)
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.gvFormat.End
+
+Program.Sub.fmWIPDetail_UnLoad.Start
+'CLOSE EVERYTHING AND UNLOAD THE DASHBOARD
+f.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+gui.fmWIPDetail..Visible(false)
+
+F.Intrinsic.Control.CallSub(Serialize, "FORM", "fmWIPDetail", "GRIDCONTROL", "GsGcWIP", "GRIDVIEW", "gvWIP", "REGID", "6895")
+
+f.Data.DataView.Close("dtWIP","dvWIP")
+f.Data.DataTable.Close("dtWIP")
+
+f.Intrinsic.Control.End
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.fmWIPDetail_UnLoad.End
+
+Program.Sub.Serialize.Start
+f.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+V.Local.sSerialize.Declare(String)
+V.Local.sForm.Declare(String)
+V.Local.sGridControl.Declare(String)
+V.Local.sGridView.Declare(String)
+V.Local.sREGID.Declare(String)
+
+V.Local.sForm.Set(V.Args.Form.Trim)
+V.Local.sGridControl.Set(V.Args.GridControl.Trim)
+V.Local.sGridView.Set(V.Args.GridView.Trim)
+V.Local.sREGID.Set(V.Args.REGID.Trim)
+
+GUI.[V.Local.sForm].[V.Local.sGridControl].Serialize(V.Local.sGridView, V.Local.sSerialize)
+F.Global.Registry.AddValue(V.Caller.User, V.Caller.CompanyCode, V.Local.sGridView, V.Local.sREGID, 1000, False, "Serialize", False, 0, -999.0 , 1/1/1980, 12:00:00 AM, V.Local.sSerialize)
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+f.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+V.Local.sSerialize.Declare(String)
+V.Local.sForm.Declare(String)
+V.Local.sGridControl.Declare(String)
+V.Local.sGridView.Declare(String)
+V.Local.sREGID.Declare(String)
+
+V.Local.sForm.Set(V.Args.Form.Trim)
+V.Local.sGridControl.Set(V.Args.GridControl.Trim)
+V.Local.sGridView.Set(V.Args.GridView.Trim)
+V.Local.sREGID.Set(V.Args.REGID.Trim)
+
+F.Global.Registry.ReadValue(V.Caller.User, V.Caller.CompanyCode, V.Local.sGridView, V.Local.sREGID, 1000, 6, "", V.Local.sSerialize)
+F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+	Gui.[V.Local.sForm].[V.Local.sGridControl].Deserialize(V.Local.sSerialize)
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.Deserialize.End
+
+Program.Sub.ResetSerialization.Start
+f.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+V.Local.sSQL.Declare(String)
+V.Local.iUserID.Declare(Long)
+V.Local.sREGID.Declare(String)
+
+V.Local.sREGID.Set(6895)
+
+F.Global.Security.GetUserId(V.Caller.User, V.Caller.CompanyCode, V.Local.iUserID)
+F.Intrinsic.String.Build("delete from GS_REGISTRY where REG_ID = '{0}' and USER_ID = {1}", V.Local.sREGID, V.Local.iUserID, V.Local.sSQL)
+
+F.ODBC.Connection!Comm.OpenCommonConnection
+F.ODBC.Connection!Comm.Execute(V.Local.sSQL)
+F.ODBC.Connection!Comm.Close
+
+gui.fmWIPDetail.GsGcWIP.Visible(false)
+gui.fmWIPDetail.GsGcWIP.SuspendLayout
+gui.fmWIPDetail.GsGcWIP.AddGridviewFromDataview("gvWIP","dtWIP","dvWIP")
+
+f.Intrinsic.Control.CallSub(gvFormat)
+
+gui.fmWIPDetail.GsGcWIP.MainView("gvWIP")
+gui.fmWIPDetail.GsGcWIP.ResumeLayout
+gui.fmWIPDetail.GsGcWIP.Visible(true)
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.ResetSerialization.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8273.27146$}$0
+${$6$}$rcole$}$20220914151250863$}$ZUe18EWXbmRoTBVoeWbrFXakeGdGvm0OaqCjUTNguUb/+rlkh9Y5plQMGX50EeSkty3gc68tjAs=
+Program.Sub.Comments.End
